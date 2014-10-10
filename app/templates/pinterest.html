@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/static/pinterest2.css" type="text/css">
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="/static/packery.pkgd.min.js"></script>
+<script type="text/javascript" src="../jquery.lazy.min.js"></script>
+<!--<script src="/static/masonry.pkgd.min.js"></script>-->
+<script src="/static/main.js"></script>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<center><a href="/admin">upload file</a></center>
+<div>
+    <div id="container">
+        {% for item in items %}
+        <div class="item" onclick="location.href='{{ item.image_href }}';">
+            <img  data-src="{{ item.image_href }}" src="{{ item.image_href }}" />
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
